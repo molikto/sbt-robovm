@@ -65,7 +65,15 @@ public class SBTRoboVMResolver extends RoboVMResolver {
 
     //Those methods are same as original, but instead of Maven.configureResolver() they call configureResolver()
 
+    private static String ROBOVM_DIST_OLD = "org.robovm:robovm-dist:tar.gz:nocompiler";
+    private static String ROBOVM_DIST_NEW = "com.mobidevelop.robovm:robovm-dist:tar.gz:nocompiler";
+
+
+
     public MavenResolvedArtifact resolveArtifact(String artifact) {
+        if (artifact.startsWith(ROBOVM_DIST_OLD)) {
+            artifact = ROBOVM_DIST_NEW + artifact.substring(ROBOVM_DIST_OLD.length());
+        }
         try {
             /* do offline check first */
             return configureResolver().workOffline().resolve(artifact).withoutTransitivity().asSingleResolvedArtifact();
@@ -78,6 +86,9 @@ public class SBTRoboVMResolver extends RoboVMResolver {
     }
 
     public MavenResolvedArtifact[] resolveArtifacts(String artifact) {
+        if (artifact.startsWith(ROBOVM_DIST_OLD)) {
+            artifact = ROBOVM_DIST_NEW + artifact.substring(ROBOVM_DIST_OLD.length());
+        }
         try {
             /* do offline check first */
             return configureResolver().workOffline().resolve(artifact).withTransitivity().asResolvedArtifact();

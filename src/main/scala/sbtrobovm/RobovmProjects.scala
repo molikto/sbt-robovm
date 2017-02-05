@@ -165,10 +165,10 @@ object RobovmProjects {
   )
 
   lazy val toolSettings = Seq(
-    robovmLicense := {
-      RobovmInterfaceBuilder.clearIBProxyCreationFailures()
-      com.robovm.lm.LicenseManager.forkUI()
-    },
+    // robovmLicense := {
+    //   RobovmInterfaceBuilder.clearIBProxyCreationFailures()
+    //   com.robovm.lm.LicenseManager.forkUI()
+    // },
     simulatorDevices := {
       //This tool needs working iOS project configuration, which is not present by default
       //So by default, show just some help

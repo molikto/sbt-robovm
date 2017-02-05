@@ -1,6 +1,7 @@
 
 This branch is based on 1.8 branch, and modified to use MobiDevelop's fork of roboVM. The version now is 2.3.0. following MobiDevelop's version
 
+This is the only change has been made https://github.com/molikto/sbt-robovm/commit/914cdd531778359328bf08d5c278dbe2fdfced16
 
 ---------------------
 # sbt-robovm

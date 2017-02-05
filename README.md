@@ -1,3 +1,6 @@
+
+This branch is based on 1.8 branch, and modified to use MobiDevelop's fork of roboVM
+---------------------
 # sbt-robovm
 
 sbt-robovm is a plugin for the Scala build tool that aims to make it as simple as possible to compile Scala (and Java) code to binaries for iOS, linux, and OSX using [RoboVM](http://www.robovm.org/)

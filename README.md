@@ -1,5 +1,7 @@
 
-This branch is based on 1.8 branch, and modified to use MobiDevelop's fork of roboVM
+This branch is based on 1.8 branch, and modified to use MobiDevelop's fork of roboVM. The version now is 2.3.0. following MobiDevelop's version
+
+
 ---------------------
 # sbt-robovm
 
